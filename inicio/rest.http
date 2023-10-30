@@ -1,0 +1,91 @@
+GET http://localhost:5000/padron
+
+
+### create a padron
+POST http://localhost:5000/padron
+Content-Type: application/json
+
+{
+ "dni": 20115622,
+ "cuit": 20201156221,
+ "denominacion": "raquel yumes"
+}
+
+
+### get padron by id
+GET  http://localhost:5000/padron/650314418a7e16d11011cb7f
+
+###update padron by id
+PATCH  http://localhost:5000/padron/650ae72656aace16fe18d535
+Content-Type: application/json
+
+{
+ "denominacion": "oscar kondratiuk"
+}
+
+###delete padron by id
+DELETE  http://localhost:5000/padron/6509aeefb0f7780f8dfbb38b
+
+###
+GET  http://localhost:5000/
+
+###
+GET  http://localhost:5000/test?dni=35842412&cuit=20358424121&denominacion=jonatankon
+
+###
+POST  http://localhost:5000/test 
+content-Type: application/json
+
+{
+ "dni": 35842412,
+ "cuit": 20358424121,
+ "denominacion": "jonatankon"
+}
+
+###
+GET http://localhost:5000/abc_xyz
+
+
+
+
+
+
+###
+GET http://localhost:5000/deudor
+
+### crear deudor
+POST http://localhost:5000/deudor
+Content-Type: application/json
+
+{
+ "dni": 20115622,
+ "cuit": 20201156221,
+ "numeroCheque": 9,
+ "monto": 1500000
+}
+
+
+### get a deudor by id
+GET http://localhost:5000/deudor/
+
+### update a deudor by id
+PATCH http://localhost:5000/deudor/65319a771f801d03e9c1d9ff
+Content-Type: application/json
+
+{
+ "cuit": 20358424121
+}
+
+### delete a deudor by id
+DELETE http://localhost:5000/deudor/65327ceb12f3111e63df4eec
+
+### crear deudor
+POST http://localhost:5000/deudor
+Content-Type: application/json
+
+{
+ "dni": 35842412,
+ "cuit": 20358424121,
+ "numeroCheque": 1,
+ "monto": 1000,
+}
